@@ -5,239 +5,928 @@
     <meta charset="UTF-8">
     <title>등기24_blog</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'blog/bootstrap.css' %}" >
-    <link rel="shortcut icon" type="image/png" href="https://via.placeholder.com/20.png" >
-    <link href="https://fonts.googleapis.com/css?family=Heebo:300,400" rel="stylesheet">
-    <script src="{% static '_assets/js/uikit.js'%}"></script>
+    <meta name="description" content="Amdesk - Help Center HTML template for your digital products">
+    <meta name="keywords" content="helpdesk, forum, template, HTML template, responsive, clean">
+    <meta name="author" content="nK">
+
+    <link rel="icon" type="image/png" href="{% static '_assets/images/favicon.png' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- START: Styles -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700%7cMaven+Pro:400,500,700" rel="stylesheet"><!-- %7c -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static '_assets/vendor/bootstrap/dist/css/bootstrap.min.css' %}">
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="{% static '_assets/vendor/fancybox/dist/jquery.fancybox.min.css' %}">
+
+    <!-- Pe icon 7 stroke -->
+    <link rel="stylesheet" href="{% static '_assets/vendor/pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css' %}">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" type="text/css" href="{% static '_assets/vendor/swiper/dist/css/swiper.min.css' %}">
+
+    <!-- Bootstrap Select -->
+    <link rel="stylesheet" type="text/css" href="{% static '_assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css' %}">
+
+    <!-- Dropzone -->
+    <link rel="stylesheet" type="text/css" href="{% static '_assets/vendor/dropzone/dist/min/dropzone.min.css' %}">
+
+    <!-- Quill -->
+    <link rel="stylesheet" type="text/css" href="{% static '_assets/vendor/quill/dist/quill.snow.css' %}">
+
+    <!-- Font Awesome -->
+    <script defer src="{% static '_assets/vendor/fontawesome-free/js/all.js' %}"></script>
+    <script defer src="{% static '_assets/vendor/fontawesome-free/js/v4-shims.js' %}"></script>
+
+    <!-- Amdesk -->
+    <link rel="stylesheet" href="{% static '_assets/css/amdesk.css' %}">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{% static '_assets/css/custom.css' %}">
+
+    <!-- END: Styles -->
+
+    <!-- jQuery -->
+    <script src="{% static '_assets/vendor/jquery/dist/jquery.min.js' %}"></script>
 
 </head>
 <body>
-<div data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 200">
-  <nav class="uk-navbar-container">
-    <div class="uk-container">
-      <div data-uk-navbar>
-          <div class="uk-navbar-left">
-            <a class="uk-navbar-item uk-logo uk-visible@m" href="index.html">등기24</a>
-            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-toggle><span
-                data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Docs</span></a>
-            <ul class="uk-navbar-nav uk-visible@m">
-              <li class="uk-active"><a href="index.html">Home</a></li>
-              <li ><a href="doc.html">법인설립지식센터</a></li>
-              <li ><a href="blog.html">블로그</a></li>
+<!--
+    START: Navbar
+
+    Additional Classes:
+        .dx-navbar-sticky || .dx-navbar-fixed
+        .dx-navbar-autohide
+        .dx-navbar-dropdown-triangle
+        .dx-navbar-dropdown-dark - only <ul>
+        .dx-navbar-expand || .dx-navbar-expand-lg || .dx-navbar-expand-xl
+-->
+<nav class="dx-navbar dx-navbar-top dx-navbar-collapse dx-navbar-sticky dx-navbar-expand-lg dx-navbar-dropdown-triangle dx-navbar-autohide">
+    <div class="container">
+
+        <a href="index.html" class="dx-nav-logo">
+            <img src="{% static '_assets/images/logo.svg' %}" alt="" width="88px">
+        </a>
+
+
+        <button class="dx-navbar-burger">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="dx-navbar-content">
+
+            <ul class="dx-nav dx-nav-align-left">
+
+        <li class="dx-drop-item">
+            <a href="store.html">
+                Store
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="store.html">
+                Store
+            </a>
+        </li>
+        <li>
+            <a href="product.html">
+                Product
+            </a>
+        </li>
+        <li>
+            <a href="checkout.html">
+                Checkout
+            </a>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item active">
+            <a href="blog.html">
+                Blog
+            </a><ul class="dx-navbar-dropdown">
+
+        <li class=" active">
+            <a href="blog.html">
+                Blog
+            </a>
+        </li>
+        <li>
+            <a href="single-post.html">
+                Single Post
+            </a>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item">
+            <a href="help-center.html">
+                Help Center
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="help-center.html">
+                Help Center
+            </a>
+        </li>
+        <li class="dx-drop-item">
+            <a href="documentations.html">
+                Documentations
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="documentations.html">
+                Documentations
+            </a>
+        </li>
+        <li>
+            <a href="single-documentation.html">
+                Single documentation
+            </a>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item">
+            <a href="articles.html">
+                Knowledge Base
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="articles.html">
+                Knowledge Base
+            </a>
+        </li>
+        <li>
+            <a href="single-article-category.html">
+                Single Article Category
+            </a>
+        </li>
+        <li>
+            <a href="single-article.html">
+                Single Article
+            </a>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item">
+            <a href="forums.html">
+                Forums
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="forums.html">
+                Forums
+            </a>
+        </li>
+        <li>
+            <a href="topics.html">
+                Topics
+            </a>
+        </li>
+        <li>
+            <a href="single-topic.html">
+                Single Topic
+            </a>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item">
+            <a href="ticket.html">
+                Ticket System
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="ticket.html">
+                Ticket System
+            </a>
+        </li>
+        <li>
+            <a href="ticket-submit.html">
+                Submit Ticket
+            </a>
+        </li>
+        <li>
+            <a href="ticket-submit-2.html">
+                Submit Ticket 2
+            </a>
+        </li>
+        <li>
+            <a href="single-ticket.html">
+                Single Ticket
+            </a>
+        </li>
+                </ul>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item">
+            <a href="account.html">
+                Account
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="account.html">
+                Account
+            </a>
+        </li>
+        <li>
+            <a href="account-licenses.html">
+                Licenses
+            </a>
+        </li>
+        <li>
+            <a href="account-settings.html">
+                Settings
+            </a>
+        </li>
+                </ul>
+        </li>
             </ul>
-          </div>
-          <div class="uk-navbar-center uk-hidden@m">
-            <a class="uk-navbar-item uk-logo" href="index.html">Docs</a>
-          </div>
-      </div>
-    </div>
-  </nav>
-</div>
 
-<div class="uk-section">
-  <div class="uk-container">
-    <div class="uk-grid-large" data-uk-grid>
-      <div class="sidebar-fixed-width uk-visible@m">
-        <div class="sidebar-docs uk-position-fixed uk-margin-top">
-          <h5>Getting Started</h5>
-          <ul class="uk-nav uk-nav-default doc-nav">
-            <li class="uk-active"><a href="doc.html">Template setup</a></li>
-            <li><a href="doc.html">Basic theme setup</a></li>
-            <li><a href="doc.html">Navigation bar</a></li>
-            <li><a href="doc.html">Footer options</a></li>
-            <li><a href="doc.html">Creating your first post</a></li>
-            <li><a href="doc.html">Creating docs posts</a></li>
-            <li><a href="doc.html">Enabling comments</a></li>
-            <li><a href="doc.html">Google Analytics</a></li>
-          </ul>
-          <h5>Product Features</h5>
-          <ul class="uk-nav uk-nav-default doc-nav">
-            <li><a href="doc.html">Hero page header</a></li>
-            <li><a href="doc.html">Category boxes section</a></li>
-            <li><a href="doc.html">Fearured docs section</a></li>
-            <li><a href="doc.html">Video lightbox boxes section</a></li>
-            <li><a href="doc.html">Frequently asked questions section</a></li>
-            <li><a href="doc.html">Team members section</a></li>
-            <li><a href="doc.html">Call to action section</a></li>
-            <li><a href="doc.html">Creating a changelog</a></li>
-            <li><a href="doc.html">Contact form</a></li>
-            <li><a href="doc.html">Adding media to post and doc content</a></li>
-            <li><a href="doc.html">Adding table of contents to docs</a></li>
-            <li><a href="doc.html">Adding alerts to content</a></li>
-          </ul>
-          <h5>Customization</h5>
-          <ul class="uk-nav uk-nav-default doc-nav">
-            <li><a href="doc.html">Translation</a></li>
-            <li><a href="doc.html">Customization</a></li>
-            <li><a href="doc.html">Development</a></li>
-            <li><a href="doc.html">Sources and credits</a></li>
-          </ul>
-          <h5>Help</h5>
-          <ul class="uk-nav uk-nav-default doc-nav">
-            <li><a href="doc.html">Contacting support</a></li>
-          </ul>
-        </div>
-      </div>
+            <ul class="dx-nav dx-nav-align-right">
+                <li>
+                    <div class="dropdown dx-dropdown dx-dropdown-checkout">
+                        <a class="dx-nav-icon" href="#" role="button" id="dropdownCheckout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="dx-nav-badge">2</span>
+                            <span class="icon dx-icon-bag"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownCheckout">
+                            <table class="dx-table dx-table-checkout">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="dx-table-checkout-img">
+                                            <a href="product.html"><img src="{% static '_assets/images/product-1-sm.png' %}" alt=""></a>
+                                        </th>
+                                        <td class="dx-table-checkout-title">
+                                            <a href="product.html">Sensific – Saying Beast Lesser for in Fruitful</a>
+                                        </td>
+                                        <td class="dx-table-checkout-price">
+                                            <div class="dx-table-checkout-price">$59</div>
+                                        </td>
+                                        <td class="dx-table-checkout-delete">
+                                            <a href="#"><span class="icon pe-7s-close"></span></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="dx-table-checkout-img">
+                                            <a href="product.html"><img src="{% static '_assets/images/product-2-sm.png' %}" alt=""></a>
+                                        </th>
+                                        <td class="dx-table-checkout-title">
+                                            <a href="product.html">Minist – Subdue Above for Signs Dry is Have Great</a>
+                                        </td>
+                                        <td class="dx-table-checkout-price">
+                                            <div class="dx-table-checkout-price">$39</div>
+                                        </td>
+                                        <td class="dx-table-checkout-delete">
+                                            <a href="#"><span class="icon pe-7s-close"></span></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex justify-content-between dx-box-content pt-0 pb-0 mt-15 mnb-6">
+                                <span>Total Payment:</span><span><strong>$98</strong></span>
+                            </div>
+                            <div class="dx-box-content">
+                                <a href="checkout.html" class="dx-btn dx-btn-md dx-btn-block">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
 
-		<div class="uk-width-1-1 uk-width-expand@m">
-			<article class="uk-article">
-			{% for p in object_list %}
-    		<h1 class="uk-article-title">{{ p.title }}</h1>
-				<div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
-					<img class="uk-border-circle avatar" src="https://via.placeholder.com/80" alt="Tom Farrell">
-					<div> written by {{p.author}}<br>
-						{{ p.created }}
-					</div>
-				</div>
-			<p class="article-content link-primary">{{ p.content }}</p>
-		{% endfor %}
-		</article>
-	</div>
+                <li>
+                    <a data-fancybox data-touch="false" data-close-existing="true" data-src="#login" href="javascript:;">Log In</a>
+                </li>
+                <li>
+                    <span><a data-fancybox data-touch="false" data-close-existing="true" data-src="#signup" href="javascript:;" class="dx-btn dx-btn-md dx-btn-transparent">Sign Up</a></span>
+                </li>
 
-            <div class="share uk-text-center uk-margin-medium-top">
-              <a class="uk-link-muted"
-                href="#" rel="nofollow" target="_blank" title="Share on Twitter"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
-              <a class="uk-link-muted uk-margin-small-left"
-                href="#"
-                rel="nofollow" target="_blank" title="Share on Facebook"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
-            </div>
-          </div>
-          <hr class="uk-margin-medium">
-          <div class="uk-margin-large-top paginate-post">
-            <div class="uk-child-width-expand@s uk-grid-large" data-uk-grid>
-              <div>
-              </div>
-              <div>
-                <h5>Basic theme setup</h5>
-                <div class="uk-text-right"><a class="remove-underline hvr-forward" href="doc.html">Next →</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="uk-margin-large-top">
-            <h3>Related Docs</h3>
-            <ul class="uk-list link-secondary">
-              <li><a href="doc.html">Creating a changelog</a></li>
-              <li><a href="doc.html">Contact form</a></li>
-              <li><a href="doc.html">Creating docs posts</a></li>
-              <li><a href="doc.html">Footer options</a></li>
             </ul>
-          </div>
-        </article>
-      </div>
+        </div>
     </div>
-  </div>
-</div>
+</nav>
+<div class="dx-navbar dx-navbar-fullscreen">
+    <div class="container">
+        <button class="dx-navbar-burger">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="dx-navbar-content">
 
-<div id="offcanvas-docs" data-uk-offcanvas="overlay: true">
-  <div class="uk-offcanvas-bar">
-    <button class="uk-offcanvas-close" type="button" data-uk-close></button>
-    <h5 class="uk-margin-top">Getting Started</h5>
-    <ul class="uk-nav uk-nav-default doc-nav">
-      <li class="uk-active"><a href="doc.html">Template setup</a></li>
-      <li><a href="doc.html">Basic theme setup</a></li>
-      <li><a href="doc.html">Navigation bar</a></li>
-      <li><a href="doc.html">Footer options</a></li>
-      <li><a href="doc.html">Creating your first post</a></li>
-      <li><a href="doc.html">Creating docs posts</a></li>
-      <li><a href="doc.html">Enabling comments</a></li>
-      <li><a href="doc.html">Google Analytics</a></li>
-    </ul>
-    <h5 class="uk-margin-top">Product Features</h5>
-    <ul class="uk-nav uk-nav-default doc-nav">
-      <li><a href="doc.html">Hero page header</a></li>
-      <li><a href="doc.html">Category boxes section</a></li>
-      <li><a href="doc.html">Fearured docs section</a></li>
-      <li><a href="doc.html">Video lightbox boxes section</a></li>
-      <li><a href="doc.html">Frequently asked questions section</a></li>
-      <li><a href="doc.html">Team members section</a></li>
-      <li><a href="doc.html">Call to action section</a></li>
-      <li><a href="doc.html">Creating a changelog</a></li>
-      <li><a href="doc.html">Contact form</a></li>
-      <li><a href="doc.html">Adding media to post and doc content</a></li>
-      <li><a href="doc.html">Adding table of contents to docs</a></li>
-      <li><a href="doc.html">Adding alerts to content</a></li>
-    </ul>
-    <h5 class="uk-margin-top">Customization</h5>
-    <ul class="uk-nav uk-nav-default doc-nav">
-      <li><a href="doc.html">Translation</a></li>
-      <li><a href="doc.html">Customization</a></li>
-      <li><a href="doc.html">Development</a></li>
-      <li><a href="doc.html">Sources and credits</a></li>
-    </ul>
-    <h5 class="uk-margin-top">Help</h5>
-    <ul class="uk-nav uk-nav-default doc-nav">
-      <li><a href="doc.html">Contacting support</a></li>
-    </ul>
-  </div>
-</div>
+            <ul class="dx-nav dx-nav-align-left">
 
-<div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
-  <div class="uk-offcanvas-bar">
-    <a class="uk-logo" href="index.html">Docs</a>
-    <button class="uk-offcanvas-close" type="button" data-uk-close></button>
-    <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-top">
-      <li ><a href="index.html">Home</a></li>
-      <li class="uk-active"><a href="doc.html">Docs</a></li>
-      <li ><a href="blog.html">Blog</a></li>
-      <li ><a href="contact.html">Contact</a></li>
-      <li>
-        <div class="uk-navbar-item"><a class="uk-button uk-button-success" href="contact.html">Contact</a></div>
-      </li>
-    </ul>
-    <div class="uk-margin-top uk-text-center">
-      <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center">
-        <div>
-          <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link" target="_blank"></a>
+        <li class="dx-drop-item">
+            <a href="store.html">
+                Store
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="store.html">
+                Store
+            </a>
+        </li>
+        <li>
+            <a href="product.html">
+                Product
+            </a>
+        </li>
+        <li>
+            <a href="checkout.html">
+                Checkout
+            </a>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item active">
+            <a href="blog.html">
+                Blog
+            </a><ul class="dx-navbar-dropdown">
+
+        <li class=" active">
+            <a href="blog.html">
+                Blog
+            </a>
+        </li>
+        <li>
+            <a href="single-post.html">
+                Single Post
+            </a>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item">
+            <a href="help-center.html">
+                Help Center
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="help-center.html">
+                Help Center
+            </a>
+        </li>
+        <li class="dx-drop-item">
+            <a href="documentations.html">
+                Documentations
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="documentations.html">
+                Documentations
+            </a>
+        </li>
+        <li>
+            <a href="single-documentation.html">
+                Single documentation
+            </a>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item">
+            <a href="articles.html">
+                Knowledge Base
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="articles.html">
+                Knowledge Base
+            </a>
+        </li>
+        <li>
+            <a href="single-article-category.html">
+                Single Article Category
+            </a>
+        </li>
+        <li>
+            <a href="single-article.html">
+                Single Article
+            </a>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item">
+            <a href="forums.html">
+                Forums
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="forums.html">
+                Forums
+            </a>
+        </li>
+        <li>
+            <a href="topics.html">
+                Topics
+            </a>
+        </li>
+        <li>
+            <a href="single-topic.html">
+                Single Topic
+            </a>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item">
+            <a href="ticket.html">
+                Ticket System
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="ticket.html">
+                Ticket System
+            </a>
+        </li>
+        <li>
+            <a href="ticket-submit.html">
+                Submit Ticket
+            </a>
+        </li>
+        <li>
+            <a href="ticket-submit-2.html">
+                Submit Ticket 2
+            </a>
+        </li>
+        <li>
+            <a href="single-ticket.html">
+                Single Ticket
+            </a>
+        </li>
+                </ul>
+        </li>
+                </ul>
+        </li>
+        <li class="dx-drop-item">
+            <a href="account.html">
+                Account
+            </a><ul class="dx-navbar-dropdown">
+
+        <li>
+            <a href="account.html">
+                Account
+            </a>
+        </li>
+        <li>
+            <a href="account-licenses.html">
+                Licenses
+            </a>
+        </li>
+        <li>
+            <a href="account-settings.html">
+                Settings
+            </a>
+        </li>
+                </ul>
+        </li>
+            </ul>
+
+            <ul class="dx-nav dx-nav-align-right">
+
+                <li>
+                    <a class="dx-nav-icon" href="checkout.html">
+                        <span class="dx-nav-badge">2</span>
+                        <span class="icon dx-icon-bag"></span>
+                    </a>
+                </li>
+                <li>
+                    <a data-fancybox data-touch="false" data-close-existing="true" data-src="#login" href="javascript:;">Log In</a>
+                </li>
+                <li>
+                    <span><a data-fancybox data-touch="false" data-close-existing="true" data-src="#signup" href="javascript:;" class="dx-btn dx-btn-md dx-btn-transparent">Sign Up</a></span>
+                </li>
+
+            </ul>
         </div>
-        <div>
-          <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link" target="_blank"></a>
-        </div>
-        <div>
-          <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link" target="_blank"></a>
-        </div>
-        <div>
-          <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link" target="_blank"></a>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
+<!-- END: Navbar -->
+
+    <div class="dx-main">
+
+
+<header class="dx-header dx-box-5">
+    <div class="bg-image bg-image-parallax">
+        <img src="{% static '_assets/images/bg-header-3.png' %}" class="jarallax-img' %}" alt="">
+        <div style="background-color: rgba(27, 27, 27, .8);"></div>
+    </div>
+
+    <div class="container mnb-8">
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h1 class="h4 mb-10 text-white text-center">Welcome to our Blog</h1>
+
+<!-- START: Breadcrumbs -->
+<ul class="dx-breadcrumbs text-center">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li>Blog</li>
+
+
+</ul>
+<!-- END: Breadcrumbs -->
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="dx-box-1 pb-100 bg-grey-6">
+    <div class="container">
+        <div class="row vertical-gap md-gap">
+            <div class="col-lg-8">
+
+            {% for p in object_list %}
+             <div class="dx-blog-item dx-box dx-box-decorated">
+                <a href="single-post.html" class="dx-blog-item-img"><img src="{% static '_assets/images/blog-3.png' %}" alt=""></a>
+                <div class="dx-blog-item-cont">
+                    <h2 class="h3 dx-blog-item-title"><a href="single-post.html">{{ p.title }}</a></h2>
+                    <ul class="dx-blog-item-info">
+                        <li>{{ p.created }}</li>
+                        <li>Views: 124</li>
+                        <li>Category:
+                            <ul class="dx-blog-item-categories">
+                                <li><a href="#">News</a></li>
+                            </ul>
+                        </li>
+                        <li>Author: <a href="#">{{p.author}}</a></li>
+                    </ul>
+                    <div class="dx-blog-item-text">
+                        <p>{{ p.content }}</p>
+                    </div>
+                    <a href="single-post.html" class="dx-btn dx-btn-lg">Read More</a>
+                </div>
+            </div
+            {% endfor %}
+
+<div class="dx-widget dx-box dx-box-decorated">
+    <div class="dx-widget-title">
+        Subscribe to Newsletter
+    </div>
+    <div class="dx-widget-subscribe">
+        <div class="dx-widget-text">
+            <p>Join the newsletter to receive news, updates, new products and freebies in your inbox.</p>
+        </div>
+        <form action="#" class="dx-form dx-form-group-inputs">
+            <input type="email" name="" value="" aria-describedby="emailHelp" class="form-control form-control-style-2" placeholder="Your Email Address">
+            <button class="dx-btn dx-btn-lg dx-btn-icon"><span class="icon fas fa-paper-plane"></span></button>
+        </form>
+    </div>
 </div>
 
-<footer class="uk-section uk-text-center uk-text-muted">
-	<div class="uk-container uk-container-small">
-		<div>
-			<ul class="uk-subnav uk-flex-center">
-				<li><a href="#">Home</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-		<div class="uk-margin-medium">
-			<div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center">
-				<div class="uk-first-column">
-					<a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
-				</div>
-				<div>
-					<a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon"
-						target="_blank"></a>
-				</div>
-				<div>
-					<a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon"
-						target="_blank"></a>
-				</div>
-				<div>
-					<a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
-				</div>
-			</div>
-		</div>
-		<div class="uk-margin-medium uk-text-small copyright link-secondary">Made by <a
-				href="https://unbound.studio/">Unbound Studio</a> in Cleveland, USA.</div>
-	</div>
+
+<div class="dx-widget dx-box dx-box-decorated">
+    <form action="#" class="dx-form dx-form-group-inputs">
+        <input type="text" name="" value="" class="form-control form-control-style-2" placeholder="Search...">
+        <button class="dx-btn dx-btn-lg dx-btn-grey dx-btn-grey-style-2 dx-btn-icon"><span class="icon fas fa-search"></span></button>
+    </form>
+</div>
+
+
+<div class="dx-widget dx-box dx-box-decorated">
+    <div class="dx-widget-title">Categories</div>
+    <ul class="dx-widget-categories">
+        <li>
+            <a href="single-article-category.html">
+                <span class="icon pe-7s-angle-right"></span>
+                <span class="dx-widget-categories-category">Design & Coding</span>
+                <span class="dx-widget-categories-badge">(12)</span>
+            </a>
+        </li>
+        <li>
+            <a href="single-article-category.html">
+                <span class="icon pe-7s-angle-right"></span>
+                <span class="dx-widget-categories-category">News</span>
+                <span class="dx-widget-categories-badge">(8)</span>
+            </a>
+        </li>
+        <li>
+            <a href="single-article-category.html">
+                <span class="icon pe-7s-angle-right"></span>
+                <span class="dx-widget-categories-category">Inspirations</span>
+                <span class="dx-widget-categories-badge">(2)</span>
+            </a>
+        </li>
+        <li>
+            <a href="single-article-category.html">
+                <span class="icon pe-7s-angle-right"></span>
+                <span class="dx-widget-categories-category">Theme Reviews</span>
+                <span class="dx-widget-categories-badge">(14)</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="dx-widget dx-box dx-box-decorated">
+    <div class="dx-widget-title">
+        Latest Posts
+    </div>
+    <a href="single-post.html" class="dx-widget-post">
+
+        <span class="dx-widget-post-img"><img src="{% static '_assets/images/blog-3-sm.png' %}" alt=""></span>
+        <span class="dx-widget-post-text">
+            <span class="dx-widget-post-title">The Big Thing in Design</span>
+            <span class="dx-widget-post-date">25 Sep 2018</span>
+        </span>
+
+    </a>
+    <a href="single-post.html" class="dx-widget-post">
+
+        <span class="dx-widget-post-img"><img src="{% static '_assets/images/blog-1-sm.png' %}" alt=""></span>
+        <span class="dx-widget-post-text">
+            <span class="dx-widget-post-title">Will Coding Ever Rule the World?</span>
+            <span class="dx-widget-post-date">24 Sep 2018</span>
+        </span>
+
+    </a>
+</div>
+
+
+<div class="dx-widget dx-box dx-box-decorated">
+    <div class="dx-widget-title">
+        Tags Widget
+    </div>
+    <ul class="dx-widget-tags">
+        <li><a href="#">Art</a></li>
+        <li><a href="#">People</a></li>
+        <li><a href="#">Branding</a></li>
+        <li><a href="#">City</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Nature</a></li>
+        <li><a href="#">Lifestyle</a></li>
+        <li><a href="#">Photography</a></li>
+    </ul>
+</div>
+
+
+<div class="dx-widget dx-box dx-box-decorated">
+    <div class="dx-widget-title">
+        Our Twitter
+    </div>
+    <div class="dx-twitter-list" data-twitter-count="3"></div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <!-- START: Footer -->
+<footer class="dx-footer">
+    <div class="dx-box-1">
+        <div class="container">
+            <div class="row vertical-gap lg-gap">
+
+                <div class="col-sm-6 col-lg-3">
+
+<div class="dx-widget-footer">
+    <div class="dx-widget-title">
+        <a href="index.html" class="dx-widget-logo">
+            <img src="{% static '_assets/images/logo.svg' %}" alt="" width="88px">
+        </a>
+    </div>
+    <div class="dx-widget-text">
+        <p class="mb-0">&copy; 2019 <span class="dib">All rights reserved.</span> <span class="dib">Dexad &amp; nK.</span></p>
+    </div>
+    <div class="dx-widget-text">
+        <ul class="dx-social-links mnt-3">
+            <li><a href="#"><span class="fab fa-behance-square"></span></a></li>
+            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+            <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
+            <li><a href="#"><span class="fab fa-github"></span></a></li>
+        </ul>
+    </div>
+</div>
+
+                </div>
+                <div class="col-sm-6 col-lg-3">
+
+<div class="dx-widget-footer">
+    <div class="dx-widget-title">
+        Useful Links
+    </div>
+    <ul class="dx-widget-list">
+        <li><a href="store.html">Store</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="forums.html">Forums</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <ul class="dx-widget-list">
+        <li><a href="help-center.html">Help Center</a></li>
+        <li>
+            <a data-fancybox data-touch="false" data-close-existing="true" data-src="#signup" href="javascript:;">Sign Up</a>
+        </li>
+        <li>
+            <a data-fancybox data-touch="false" data-close-existing="true" data-src="#login" href="javascript:;">Log In</a>
+        </li>
+    </ul>
+</div>
+
+                </div>
+                <div class="col-sm-6 col-lg-3">
+
+<div class="dx-widget-footer">
+    <div class="dx-widget-title">
+        Latest Products
+    </div>
+    <div class="dx-widget-portfolio">
+        <a href="product.html">Quantial – Moving Upon Signs Moveth Lesser</a>
+        <a href="product.html">Sensific – Saying Beast Lesser for in Fruitful</a>
+        <a href="product.html">Minist – Subdue Above for Signs Dry is Have Great</a>
+    </div>
+</div>
+
+                </div>
+                <div class="col-sm-6 col-lg-3">
+
+<div class="dx-widget-footer">
+    <div class="dx-widget-title">
+        Latest Posts
+    </div>
+    <a href="single-post.html" class="dx-widget-post">
+
+        <span class="dx-widget-post-text">
+            <span class="dx-widget-post-title">The Big Thing in Design</span>
+            <span class="dx-widget-post-date">25 Sep 2018</span>
+        </span>
+
+    </a>
+    <a href="single-post.html" class="dx-widget-post">
+
+        <span class="dx-widget-post-text">
+            <span class="dx-widget-post-title">Will Coding Ever Rule the World?</span>
+            <span class="dx-widget-post-date">24 Sep 2018</span>
+        </span>
+
+    </a>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
+<!-- END: Footer -->
 
-<script src="{% static '_assets/js/awesomplete.js' %}"></script>
-<script src="{% static '_assets/js/custom.js' %}"></script>
+    </div>
+
+    <div class="dx-popup dx-popup-signin" id="login">
+    <button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
+    <div class="dx-signin-content dx-signin text-center">
+        <h1 class="h3 text-white mb-30">Log In</h1>
+
+        <form action="#" class="dx-form">
+            <div class="dx-form-group-md">
+                <a href="account.html" class="dx-btn dx-btn-block dx-btn-popup dx-btn-envato d-flex align-items-center justify-content-center">
+                    <span class="fas fa-leaf mr-20"></span><span>Log in with Envato</span>
+                </a>
+            </div>
+            <div class="dx-form-group-md">
+                <div class="dx-signin-or">OR</div>
+            </div>
+            <div class="dx-form-group-md">
+                <input type="text" class="form-control form-control-style-4" placeholder="Username Or Email">
+            </div>
+            <div class="dx-form-group-md">
+                <input type="password" class="form-control form-control-style-4" placeholder="Password">
+            </div>
+            <div class="dx-form-group-md">
+                <a href="account.html" class="dx-btn dx-btn-block dx-btn-popup">Log In</a>
+            </div>
+            <div class="dx-form-group-md">
+                <div class="d-flex justify-content-between">
+                    <a data-fancybox data-touch="false" data-close-existing="true" data-src="#reset-password" href="javascript:;">Reset your password</a>
+                    <a data-fancybox data-touch="false" data-close-existing="true" data-src="#signup" href="javascript:;">Sign Up</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="dx-popup dx-popup-signin" id="signup">
+    <button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="10" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
+    <div class="dx-popup-content dx-signin text-center">
+        <h1 class="h3 text-white mb-30">Sign Up</h1>
+
+        <form action="#" class="dx-form">
+            <div class="dx-form-group-md">
+                <a href="account.html" class="dx-btn dx-btn-block dx-btn-popup dx-btn-envato d-flex align-items-center justify-content-center">
+                    <span class="fas fa-leaf mr-20"></span><span>Sign Up with Envato</span>
+                </a>
+            </div>
+            <div class="dx-form-group-md">
+                <div class="dx-signin-or">OR</div>
+            </div>
+            <div class="dx-form-group-md">
+                <input type="text" class="form-control form-control-style-4" placeholder="Username">
+            </div>
+            <div class="dx-form-group-md">
+                <input type="email" class="form-control form-control-style-4" aria-describedby="emailHelp" placeholder="Email">
+            </div>
+            <div class="dx-form-group-md">
+                <input type="password" class="form-control form-control-style-4" placeholder="Password">
+            </div>
+            <div class="dx-form-group-md">
+                <input type="password" class="form-control form-control-style-4" placeholder="Confirm password">
+            </div>
+            <div class="dx-form-group-md">
+                <a href="account.html" class="dx-btn dx-btn-block dx-btn-popup">Sign Up</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="dx-popup dx-popup-signin" id="reset-password">
+    <button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
+    <div class="dx-popup-content dx-signin text-center">
+        <h1 class="h3 text-white mb-30">Reset Password</h1>
+
+        <form action="#" class="dx-form">
+            <div class="dx-form-group-md">
+                <input type="email" class="form-control form-control-style-4" aria-describedby="emailHelp" placeholder="Email">
+            </div>
+            <div class="dx-form-group-md">
+                <button class="dx-btn dx-btn-block dx-btn-popup">Reset My Password</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="subscribe" class="dx-popup dx-popup-modal dx-popup-subscribe">
+    <button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
+    <div class="dx-box dx-box-decorated">
+        <div class="dx-box-content">
+            <h6 class="mnt-5 mnb-5">Subscribe to Newsletter</h6>
+        </div>
+        <div class="dx-separator"></div>
+        <div class="dx-box-content">
+            <p class="mnt-5 fs-15">Join the newsletter to receive news, updates, new products and freebies in your inbox.</p>
+            <form action="#" class="dx-form dx-form-group-inputs">
+                <input type="email" name="" value="" aria-describedby="emailHelp" class="form-control form-control-style-2" placeholder="Your Email Address">
+                <button class="dx-btn dx-btn-lg dx-btn-icon"><span class="icon fas fa-paper-plane"></span></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- START: Scripts -->
+
+<!-- Object Fit Images -->
+<script src="{% static '_assets/vendor/object-fit-images/dist/ofi.min.js' %}"></script>
+
+<!-- Popper -->
+<script src="{% static '_assets/vendor/popper.js/dist/umd/popper.min.js' %}"></script>
+
+<!-- Bootstrap -->
+<script src="{% static '_assets/vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+<!-- Fancybox -->
+<script src="{% static '_assets/vendor/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+
+<!-- Cleave -->
+<script src="{% static '_assets/vendor/cleave.js/dist/cleave.min.js' %}"></script>
+
+<!-- Validator -->
+<script src="{% static '_assets/vendor/validator/validator.min.js' %}"></script>
+
+<!-- Sticky Kit -->
+<script src="{% static '_assets/vendor/sticky-kit/dist/sticky-kit.min.js' %}"></script>
+
+<!-- Jarallax -->
+<script src="{% static '_assets/vendor/jarallax/dist/jarallax.min.js' %}"></script>
+<script src="{% static '_assets/vendor/jarallax/dist/jarallax-video.min.js' %}"></script>
+
+<!-- Isotope -->
+<script src="{% static '_assets/vendor/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+
+<!-- ImagesLoaded -->
+<script src="{% static '_assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+
+<!-- Swiper -->
+<script src="{% static '_assets/vendor/swiper/dist/js/swiper.min.js' %}"></script>
+
+<!-- Gist Embed -->
+<script src="{% static '_assets/vendor/gist-embed/gist-embed.min.js' %}"></script>
+
+<!-- Bootstrap Select -->
+<script src="{% static '_assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+
+<!-- Dropzone -->
+<script src="{% static '_assets/vendor/dropzone/dist/min/dropzone.min.js' %}"></script>
+
+<!-- Quill -->
+<script src="{% static '_assets/vendor/quill/dist/quill.min.js' %}"></script>
+
+<!-- The Amdesk -->
+<script src="{% static '_assets/js/amdesk.min.js' %}"></script>
+<script src="{% static '_assets/js/amdesk-init.js' %}"></script>
+<!-- END: Scripts -->
 
 
 </body>
